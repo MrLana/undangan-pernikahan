@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan - Anggas & Putri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: #3a3a3a;
+      flex-direction: column;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.6);
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #c2185b;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ad1457;
+      transform: scale(1.05);
+    }
+
+    .invitation {
+      background: url('https://images.unsplash.com/photo-1508197149814-0cc02e8b7f74?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      background-attachment: fixed;
+      color: #3b3b3b;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 50px 30px;
+      border-radius: 20px;
+      max-width: 720px;
+      width: 100%;
+      animation: slideUp 1.5s ease;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      color: #c2185b;
+      margin-bottom: 20px;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .names {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+
+    .and {
+      font-family: 'Great Vibes', cursive;
+      font-size: 24px;
+      color: #999;
+    }
+
+    .details {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-top: 15px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Falling petals */
+    .petal {
+      position: fixed;
+      top: -10px;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, #ffb6c1 20%, transparent 70%);
+      border-radius: 50%;
+      animation: fall linear infinite;
+      opacity: 0.8;
+      z-index: 99;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(120vh) rotate(360deg);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 48px; }
+      h2 { font-size: 32px; }
+      .names { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik Latar -->
+  <audio autoplay loop hidden>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Efek Kelopak Jatuh -->
+  <script>
+    for (let i = 0; i < 25; i++) {
+      let petal = document.createElement("div");
+      petal.className = "petal";
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = 5 + Math.random() * 5 + "s";
+      petal.style.opacity = Math.random();
+      document.body.appendChild(petal);
+    }
+  </script>
+
+  <!-- Halaman Depan -->
+  <section class="section hero">
+    <h1>Anggas & Putri</h1>
+    <p>Dengan cinta kami mengundang Anda<br>untuk hadir di hari bahagia kami</p>
+    <a href="#undangan"><button class="btn">Lihat Undangan</button></a>
+  </section>
+
+  <!-- Halaman Undangan -->
+  <section class="section invitation" id="undangan">
+    <div class="card">
+      <h2>Undangan Pernikahan</h2>
+      <p class="quote">
+        "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup agar kamu merasa tenteram kepadanya..."<br>(QS. Ar-Rum: 21)
+      </p>
+      <p>Kami dengan hormat mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami:</p>
+      
+      <div class="names">
+        Maulana Anggas Naryama<br><span class="and">&</span><br>Mega Aulia Putri
+      </div>
+
+      <div class="details">
+        Minggu, 24 Oktober 2030<br>
+        Pukul 10.00 WIB - selesai<br><br>
+        Jogja Expo Center (JEC)<br>
+        Jl. Janti, Banguntapan, Yogyakarta
+      </div>
+
+      <p class="details">
+        Kehadiran dan doa restu Anda akan sangat berarti bagi kami.
+      </p>
+
+      <div class="footer">
+        Salam hangat,<br>Anggas & Putri
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
